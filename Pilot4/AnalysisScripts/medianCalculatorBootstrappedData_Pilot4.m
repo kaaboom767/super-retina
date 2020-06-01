@@ -15,7 +15,7 @@ for a = 1:subjects
     %% Directory stuff for data retrieval and saving
     p.SubjectsNumber = sprintf('%d', a); %use a instead of number for full group analysis
 
-    WorkingDirData = ['D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\1.3-WP4-' p.SubjectsNumber '\']; %set directory for analysis
+    WorkingDirData = [p.SubjectsNumber '\']; %set directory for analysis
     WorkingDirData = convertCharsToStrings(WorkingDirData);
     mkdir(WorkingDirData);
 
@@ -33,7 +33,7 @@ for a = 1:subjects
 
     CSVFile = readtable(AnalysisData);
 
-    ControlDataDir  = ['D:\Hyperion Cloud\ETH\Master Thesis\Data\Pilot4\1.3-WP4-' p.SubjectsNumber '\'];
+    ControlDataDir  = ['1.3-WP4-' p.SubjectsNumber '\'];
     ControlDataDir  = convertCharsToStrings(ControlDataDir);
     
     ControlDataCSV  = [ControlDataDir '1.3-WP4-' p.SubjectsNumber '_bootstrapping_table.csv'];
