@@ -17,7 +17,7 @@ for a = 1:subjects
     %% Directory stuff for data retrieval and saving
     p.SubjectsNumber = sprintf('%d', a); %use a instead of number for full group analysis
 
-    WorkingDirData = ['D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\1.3-WP4-' p.SubjectsNumber '\']; %set directory for windows to save data
+    WorkingDirData = [p.SubjectsNumber '\']; %set directory for windows to save data
     WorkingDirData = convertCharsToStrings(WorkingDirData);
 
     WorkingDirAnalysis = WorkingDirData;
@@ -34,7 +34,7 @@ for a = 1:subjects
     DataFileCSVLevel = [DataFileCSVLevel{:}];
     DataFileCSVLevel = convertCharsToStrings(DataFileCSVLevel);
     
-    WorkingDirParent = 'D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\'; %set directory for windows to save data
+    WorkingDirParent = 'Pilot4\'; %set directory for windows to save data
     WorkingDirParent = convertCharsToStrings(WorkingDirParent);
     
     DataFileCSVAccuracySummary = [WorkingDirAnalysis '_bootstrapped_analysis_accuracy.csv']; %set folders per subject
