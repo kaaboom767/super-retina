@@ -89,7 +89,7 @@ end
 
 
 %% Directory stuff for data storage
-WorkingDir = ['C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Data\Pilot2\1.3-WP2-' p.SubjectsNumber '\']; %set directory for windows to save data
+WorkingDir = [p.SubjectsNumber '\']; %set directory for windows to save data
 WorkingDir = [WorkingDir{:}];
 WorkingDir = convertCharsToStrings(WorkingDir);
 
@@ -143,8 +143,8 @@ p.VisualThreshold = visualThreshold(2,1);
 
 
 %% linearise the screen contrast
-load('C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Scripts\Alain\Beta folder\Calibration\normalGamma.mat');
-load('C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Scripts\Alain\Beta folder\Calibration\gammaTableSonyCorrect.mat'); %%% Screen calibration
+load('normalGamma.mat');
+load('gammaTableSonyCorrect.mat'); %%% Screen calibration
 Screen('LoadNormalizedGammaTable', 0, gammaTable);
 
 
