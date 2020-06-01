@@ -77,8 +77,7 @@ end
 
 
 %% Directory stuff for data storage
-WorkingDir = ['C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Data\Pilot4\1.3-WP4-' p.SubjectsNumber '\Threshold_part']; %set directory for windows to save data
-%WorkingDir = ['/home/kaaboom/Hyperion Cloud/ETH/Master Thesis/Data/Pilot1/Threshold_Part/']; %set directory for linux to save data
+WorkingDir = [p.SubjectsNumber '\Threshold_part']; %set directory for windows to save data
 WorkingDir = [WorkingDir{:}];
 WorkingDir = convertCharsToStrings(WorkingDir);
 
