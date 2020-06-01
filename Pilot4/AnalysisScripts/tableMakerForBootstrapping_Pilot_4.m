@@ -13,7 +13,7 @@ for i = 1:subjects
 
     %% Directory stuff for data retrieval
     p.SubjectsNumber = sprintf('%d', i);
-    WorkingDir = ['D:\Hyperion Cloud\ETH\Master Thesis\Data\Pilot4\1.3-WP4-' p.SubjectsNumber '\']; %set directory for windows to save data
+    WorkingDir = [p.SubjectsNumber '\']; %set directory for windows to save data
     %WorkingDir = [WorkingDir{:}];
     WorkingDir = convertCharsToStrings(WorkingDir);
 
