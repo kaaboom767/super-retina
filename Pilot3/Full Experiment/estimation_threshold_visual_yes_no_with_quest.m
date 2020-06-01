@@ -64,8 +64,7 @@ end
 
 
 %% Directory stuff for data storage
-WorkingDir = ['C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Data\Pilot3\1.3-WP3-' p.SubjectsNumber '\Threshold_part']; %set directory for windows to save data
-%WorkingDir = ['/home/kaaboom/Hyperion Cloud/ETH/Master Thesis/Data/Pilot1/Threshold_Part/']; %set directory for linux to save data
+WorkingDir = [p.SubjectsNumber '\Threshold_part']; %set directory for windows to save data
 WorkingDir = [WorkingDir{:}];
 WorkingDir = convertCharsToStrings(WorkingDir);
 
@@ -87,8 +86,8 @@ mkdir (WorkingDir); %create the subject's folder
 
 
 %% linearise the screen contrast
-load('C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Scripts\Alain\Beta folder\Calibration\normalGamma.mat');
-load('C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Scripts\Alain\Beta folder\Calibration\gammaTableSonyCorrect.mat'); %%% Screen calibration
+load('normalGamma.mat');
+load('gammaTableSonyCorrect.mat'); %%% Screen calibration
 Screen('LoadNormalizedGammaTable', 0, gammaTable);
 
 
@@ -566,7 +565,7 @@ fprintf(FID, '\r\n');
 fprintf(FID, '\r\n');
 fprintf(FID, 'Estimated Threshold: %f',t);
 fprintf(FID, '\r\n');
-fprintf(FID, 'with Sd: %f ± %f',t ,sd);
+fprintf(FID, 'with Sd: %f Â± %f',t ,sd);
 fprintf(FID, '\r\n');
 fprintf(FID, 'Standard Deviation 20: %f',sd20);
 fprintf(FID, '\r\n');
