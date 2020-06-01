@@ -14,10 +14,10 @@ accuracyArray = [];
 modeArray = [];
 
 %% Set the file location for the final analysis files
-tTestFileMat    = 'D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\paired_ttest_median_Pilot4.mat';
-tTestFileTxt    = 'D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\paired_ttest_median_Pilot4.txt';
-tTestFileCSV    = 'D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\group_control_intervention_Pilot4_median.csv';
-tTestFileCSV2   = 'D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\BootstrappedData_median_Pilot4.csv';
+tTestFileMat    = 'paired_ttest_median_Pilot4.mat';
+tTestFileTxt    = 'paired_ttest_median_Pilot4.txt';
+tTestFileCSV    = 'group_control_intervention_Pilot4_median.csv';
+tTestFileCSV2   = 'BootstrappedData_median_Pilot4.csv';
 %     DataFileMat = [DataFileMat{:}];
 %     DataFileMat = convertCharsToStrings(DataFileMat);
 
@@ -27,7 +27,7 @@ for a = 1:subjects
     %% Directory stuff for data retrieval and saving
     p.SubjectsNumber = sprintf('%d', a); %use a instead of number for full group analysis
 
-    WorkingDirData = ['D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\1.3-WP4-' p.SubjectsNumber '\']; %set directory for windows to save data
+    WorkingDirData = [p.SubjectsNumber '\']; %set directory for windows to save data
     WorkingDirData = convertCharsToStrings(WorkingDirData);
 
 %     AnalysisData = [WorkingDirData '1.3-WP4-' p.SubjectsNumber '_bootstrapping_table.csv']; %set experimental file per subject
