@@ -16,6 +16,6 @@ noise stimulation of the human retina on visual perception*. The folder for expe
  - Download or clone the repository to your PC and add the Calibration and Functions folders to your Matlab $PATH.
 
 ### Usage
- - You can test your setup by running the script *experiment_check.m" found in every experiment folder.
+ - You can test your setup by running the script *experiment_check.m* found in every experiment folder.
  - To minimise manual input throughout an experiment session, you can use the respective metascript for each experiment. However, it is also possible to run each part of the experiment seperately.
  
