@@ -1,4 +1,4 @@
-# Super-Retina
+# Super Retina Experiment
 Matlab script files for random noise stimulation of the retina.
 
 ## Overview
