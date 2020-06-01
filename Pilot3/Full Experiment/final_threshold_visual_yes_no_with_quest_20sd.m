@@ -47,8 +47,7 @@ end
 
 
 %% Directory stuff for data storage
-WorkingDir = ['C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Data\Pilot3\1.3-WP3-' p.SubjectsNumber '\Threshold_part']; %set directory for windows to save data
-%WorkingDir = ['/home/kaaboom/Hyperion Cloud/ETH/Master Thesis/Data/Pilot1/Threshold_Part/']; %set directory for linux to save data
+WorkingDir = [p.SubjectsNumber '\Threshold_part']; %set directory for windows to save data
 WorkingDir = [WorkingDir{:}];
 WorkingDir = convertCharsToStrings(WorkingDir);
 
@@ -119,8 +118,8 @@ q80.normalizePdf = 1; % This adds a few ms per call to QuestUpdate, but otherwis
 
 
 %% linearise the screen contrast
-load('C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Scripts\Alain\Beta folder\Calibration\normalGamma.mat');
-load('C:\Users\kaaboom\Hyperion Cloud\ETH\Master Thesis\Scripts\Alain\Beta folder\Calibration\gammaTableSonyCorrect.mat'); %%% Screen calibration
+load('normalGamma.mat');
+load('gammaTableSonyCorrect.mat'); %%% Screen calibration
 Screen('LoadNormalizedGammaTable', 0, gammaTable);
 
 
@@ -666,10 +665,10 @@ fprintf(FID, '\r\n');
 fprintf(FID, 'Estimated Threshold: %f',p.VisualThreshold);
 fprintf(FID, '\r\n');
 fprintf(FID, '\r\n');
-fprintf(FID, 'Estimated Threshold from 120%%: %f ± %f',t120,sd120);
+fprintf(FID, 'Estimated Threshold from 120%%: %f Â± %f',t120,sd120);
 %fprintf(FID, ' mA');
 fprintf(FID, '\r\n');
-fprintf(FID, 'Estimated Threshold from 80%%: %f ± %f',t80, sd80);
+fprintf(FID, 'Estimated Threshold from 80%%: %f Â± %f',t80, sd80);
 fprintf(FID, '\r\n');
 fprintf(FID, 'Final Mean Threshold: %f',tMean);
 fprintf(FID, '\r\n');
