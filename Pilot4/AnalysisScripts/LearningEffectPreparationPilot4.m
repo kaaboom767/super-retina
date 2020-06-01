@@ -11,7 +11,7 @@ subjectNr = 19;
 rowNr = 4*subjectNr;
 
 %% Read the source table
-originalTable = readtable('D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\Pilot 4 all blocks.csv');
+originalTable = readtable('Pilot 4 all blocks.csv');
 originalTableArray = table2array(originalTable(:,2:6));
 
 %% Create the columns for the new table
@@ -130,5 +130,5 @@ newTable = array2table(A,'VariableNames',{'Subject Number', '0%tRNS 1', '70%tRNS
                                                             '0%tRNS 4', '70%tRNS 4', '90%tRNS 4', '110%tRNS 4','130%tRNS 4'});
                                                   
 
-writetable(newTable, 'D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\Pilot4_LearningEffect.csv');
+writetable(newTable, 'Pilot4_LearningEffect.csv');
                                   
