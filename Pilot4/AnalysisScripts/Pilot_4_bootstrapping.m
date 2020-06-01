@@ -22,10 +22,10 @@ for a = 1:subjects
     %% Directory stuff for data retrieval and saving
     p.SubjectsNumber = sprintf('%d', a); %use a instead of number for full group analysis
 
-    WorkingDirData = ['D:\Hyperion Cloud\ETH\Master Thesis\Data\Pilot4\1.3-WP4-' p.SubjectsNumber '\']; %set directory for windows to save data
+    WorkingDirData = [p.SubjectsNumber '\']; %set directory for windows to save data
     WorkingDirData = convertCharsToStrings(WorkingDirData);
 
-    WorkingDirAnalysis = ['D:\Hyperion Cloud\ETH\Master Thesis\Analysis\Pilot4\1.3-WP4-' p.SubjectsNumber '\']; %set directory for analysis
+    WorkingDirAnalysis = [p.SubjectsNumber '\']; %set directory for analysis
     WorkingDirAnalysis = convertCharsToStrings(WorkingDirAnalysis);
     mkdir(WorkingDirAnalysis);
 
