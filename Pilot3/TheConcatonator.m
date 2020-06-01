@@ -12,9 +12,7 @@ subjectCount = 15; % number of subjects
 for i = 1:subjectCount
     ii = sprintf('%1d', i);
     %% Directory stuff for data storage
-    WorkingDir = ['D:\Hyperion Cloud\ETH\Master Thesis\Data\Pilot3\1.3-WP3-' ii '\']; %set directory for windows to save data
-    %WorkingDir = ['/home/kaaboom/Hyperion Cloud/ETH/Master Thesis/Data/Pilot1/Threshold_Part/']; %set directory for linux to save data
-    %WorkingDir = [WorkingDir{:}];
+    WorkingDir = ['\Pilot3\1.3-WP3-' ii '\']; %set directory for windows to save data
     WorkingDir = convertCharsToStrings(WorkingDir);
 
 
