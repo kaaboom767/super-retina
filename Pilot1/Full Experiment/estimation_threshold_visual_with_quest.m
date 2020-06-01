@@ -62,7 +62,7 @@ end
 
 
 %% Directory stuff for data storage
-WorkingDir = []; %set directory for windows to save data
+WorkingDir = [[p.SubjectsNumber '\']; %set directory for windows to save data
 WorkingDir = [WorkingDir{:}];
 WorkingDir = convertCharsToStrings(WorkingDir);
 
